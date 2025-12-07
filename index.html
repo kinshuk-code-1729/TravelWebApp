@@ -3,264 +3,223 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>NextGen — Modern Static Landing</title>
-
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-
-  <!-- Main stylesheet -->
+  <title>Voyage — Travel Planner</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-
-  <!-- Meta for theme color on mobile -->
-  <meta name="theme-color" content="#0f1724">
+  <meta name="description" content="Voyage — A modern static travel planner UI (HTML + CSS).">
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="#">
-        <svg viewBox="0 0 48 48" width="36" height="36" aria-hidden="true" focusable="false">
-          <defs>
-            <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
-              <stop offset="0" stop-color="#7c3aed" />
-              <stop offset="1" stop-color="#06b6d4" />
-            </linearGradient>
-          </defs>
-          <rect width="48" height="48" rx="10" fill="url(#g)"></rect>
-          <path d="M15 30 L24 18 L33 30" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-        </svg>
-        <span>NextGen</span>
+      <a class="brand" href="#" aria-label="Voyage homepage">
+        <span class="logo">✈️</span>
+        <span class="brand-name">Voyage</span>
       </a>
 
-      <nav class="nav" aria-label="Main navigation">
-        <a href="#features">Features</a>
-        <a href="#showcase">Showcase</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#contact" class="btn btn-ghost">Contact</a>
+      <nav class="nav">
+        <a href="#destinations">Destinations</a>
+        <a href="#itinerary">Itinerary</a>
+        <a href="#tips">Travel Tips</a>
       </nav>
 
-      <div class="controls">
-        <button class="icon-btn" id="themeToggle" aria-label="Toggle theme" title="Toggle theme">
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6">
-            <path d="M21 12.8A9 9 0 1111.2 3 7 7 0 0021 12.8z"></path>
-          </svg>
-        </button>
-        <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Get Started</button>
-      </div>
+      <button class="cta" aria-label="Start Planning">Start Planning</button>
     </div>
   </header>
 
   <main>
-    <!-- Decorative background shapes -->
-    <div class="bg-shapes" aria-hidden="true">
-      <span class="shape s1"></span>
-      <span class="shape s2"></span>
-      <span class="shape s3"></span>
-    </div>
-
     <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-content">
-          <h1>Build pixel-perfect, future-ready interfaces</h1>
-          <p class="lead">A modern static starter crafted with accessibility, performance and delightful micro-interactions in mind. No frameworks required — pure HTML & CSS (plus tiny JS for niceties).</p>
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1>Plan thoughtful trips. Faster.</h1>
+          <p>A lightweight travel planner interface — discover destinations, build itineraries, and visualize your next escape.</p>
 
-          <div class="actions">
-            <a class="btn btn-cta" href="#showcase">Explore demo</a>
-            <a class="btn btn-ghost" href="#features">Why NextGen</a>
+          <form class="search-form" aria-label="Quick trip search">
+            <div class="field">
+              <label for="destination">Destination</label>
+              <input id="destination" name="destination" placeholder="e.g. Bali, Tokyo, Lisbon" />
+            </div>
+            <div class="field small">
+              <label for="from">From</label>
+              <input id="from" type="date" />
+            </div>
+            <div class="field small">
+              <label for="to">To</label>
+              <input id="to" type="date" />
+            </div>
+            <button type="submit" class="search-btn">Explore</button>
+          </form>
+
+          <div class="quick-stats">
+            <div><strong>120+</strong> curated picks</div>
+            <div><strong>5</strong> minute itineraries</div>
+            <div><strong>100%</strong> privacy — local only</div>
           </div>
-
-          <ul class="stats" aria-hidden="true">
-            <li><strong>95%</strong><span>Performance</span></li>
-            <li><strong>99%</strong><span>Accessibility</span></li>
-            <li><strong>100ms</strong><span>Interaction</span></li>
-          </ul>
         </div>
 
-        <div class="hero-panel" aria-hidden="false" role="region" aria-label="Preview">
-          <div class="card-preview">
-            <div class="preview-header">
-              <span class="dot red"></span>
-              <span class="dot yellow"></span>
-              <span class="dot green"></span>
+        <div class="hero-visual" aria-hidden="true">
+          <!-- Decorative grid of places -->
+          <div class="visual-grid">
+            <div class="tile" style="background-image:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=7f0fa7b2ceeb4d6b6f6f9c9ecb1e1c4d');"></div>
+            <div class="tile" style="background-image:url('https://images.unsplash.com/photo-1491557345352-5929e343eb89?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=5e3d68f0c7c6e2d9f0fd9f7ff8b1e9b8');"></div>
+            <div class="tile" style="background-image:url('https://images.unsplash.com/photo-1483683804023-6ccdb62f86ef?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=63f1f0e5b16b3c7f4f3d26d8b4f1b3fb');"></div>
+            <div class="tile" style="background-image:url('https://images.unsplash.com/photo-1472214103451-9374bd1c798e?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=ef4c84f3b2881b0ef1ab9344d9f7f1b4');"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="destinations" class="container section">
+      <div class="section-head">
+        <h2>Featured Destinations</h2>
+        <p>Hand-picked places to inspire your next trip.</p>
+      </div>
+
+      <div class="cards-grid">
+        <article class="card">
+          <div class="media" style="background-image:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=8f6f6b2a0b4b8a8e8f6f6e6f6f6f6f6f');"></div>
+          <div class="card-body">
+            <h3>Lisbon, Portugal</h3>
+            <p>Historic streets, seaside vibes, and pastel tiles — a compact city for wandering.</p>
+            <div class="card-meta">
+              <span>3–5 days</span>
+              <span>€</span>
+              <label class="add-btn">
+                <input type="checkbox" />
+                <span>Add to plan</span>
+              </label>
             </div>
+          </div>
+        </article>
 
-            <div class="preview-body">
-              <h3>Product Dashboard</h3>
-              <p class="muted">Realtime metrics, modern design tokens and delightful micro-animations.</p>
+        <article class="card">
+          <div class="media" style="background-image:url('https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=1b2f3f4e5d6c7b8a9a0a1a2b3c4d5e6f');"></div>
+          <div class="card-body">
+            <h3>Kyoto, Japan</h3>
+            <p>Temples, gardens and centuries of culture. Perfect for mindful travel.</p>
+            <div class="card-meta">
+              <span>4–7 days</span>
+              <span>¥¥</span>
+              <label class="add-btn">
+                <input type="checkbox" />
+                <span>Add to plan</span>
+              </label>
+            </div>
+          </div>
+        </article>
 
-              <div class="metrics">
-                <div class="m">
-                  <span class="m-val">1.2k</span>
-                  <span class="m-label">Active</span>
-                </div>
-                <div class="m">
-                  <span class="m-val">98%</span>
-                  <span class="m-label">Uptime</span>
-                </div>
-                <div class="m">
-                  <span class="m-val">4.9</span>
-                  <span class="m-label">Satisfaction</span>
-                </div>
+        <article class="card">
+          <div class="media" style="background-image:url('https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=7c2c43f4c681b6a4a92e2d3d16d9d9f7');"></div>
+          <div class="card-body">
+            <h3>Reykjavík, Iceland</h3>
+            <p>Otherworldly landscapes, geothermal pools and dramatic coasts.</p>
+            <div class="card-meta">
+              <span>5–8 days</span>
+              <span>$$$</span>
+              <label class="add-btn">
+                <input type="checkbox" />
+                <span>Add to plan</span>
+              </label>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="itinerary" class="container section">
+      <div class="section-head">
+        <h2>Your Itinerary Preview</h2>
+        <p>Static preview and printable card — designed with accessible HTML and CSS for clarity.</p>
+      </div>
+
+      <div class="itinerary-wrap">
+        <aside class="itinerary-panel">
+          <h3>My Trip</h3>
+          <p class="muted">Select any "Add to plan" checkbox above to imagine items here (static demo).</p>
+
+          <div class="itinerary-card">
+            <h4>Lisbon • 4 days</h4>
+            <ul>
+              <li>Day 1 — Belém & Pastéis tasting</li>
+              <li>Day 2 — Alfama & Fado evening</li>
+              <li>Day 3 — Sintra day trip</li>
+            </ul>
+            <div class="itinerary-actions">
+              <button class="btn-outline">Export PDF</button>
+              <button class="btn">Print</button>
+            </div>
+          </div>
+
+          <details class="pref-details">
+            <summary>Trip Preferences</summary>
+            <form class="prefs-form">
+              <label><input type="checkbox" /> Food & Local</label>
+              <label><input type="checkbox" checked /> Sightseeing</label>
+              <label><input type="checkbox" /> Nature</label>
+              <label><input type="checkbox" /> Nightlife</label>
+            </form>
+          </details>
+        </aside>
+
+        <section class="itinerary-main">
+          <div class="map-shot" aria-hidden="true">
+            <!-- Placeholder map visual -->
+            <div class="map-overlay">Map preview</div>
+          </div>
+
+          <div class="day-cards">
+            <article class="day">
+              <div class="day-head">
+                <h4>Day 1 — Lisbon</h4>
+                <span class="time">09:00 → 20:00</span>
               </div>
-            </div>
+              <p class="muted">Start slow: local markets then riverside sunset.</p>
+              <ul>
+                <li>09:00 — Breakfast at Mercado da Ribeira</li>
+                <li>11:00 — Jerónimos Monastery</li>
+                <li>17:30 — Sunset at Miradouro</li>
+              </ul>
+            </article>
 
-            <div class="preview-footer">
-              <button class="small">View details</button>
-              <button class="small ghost">Export</button>
-            </div>
+            <article class="day">
+              <div class="day-head">
+                <h4>Day 2 — Sintra</h4>
+                <span class="time">08:00 → 18:00</span>
+              </div>
+              <p class="muted">Palaces and coastal viewpoints.</p>
+              <ul>
+                <li>09:30 — Pena Palace</li>
+                <li>13:00 — Lunch in Sintra town</li>
+                <li>16:00 — Cabo da Roca (coast)</li>
+              </ul>
+            </article>
           </div>
-        </div>
+        </section>
       </div>
     </section>
 
-    <section id="features" class="container features">
-      <h2 class="section-title">Why you'll love it</h2>
-      <p class="section-sub">A set of thoughtful defaults that make building static sites a pleasure.</p>
-
-      <div class="feature-grid">
-        <article class="feature-card">
-          <div class="f-ico">⚡</div>
-          <h3>Fast by default</h3>
-          <p>Minimal markup and CSS optimizations mean fast paint times and snappy interactions.</p>
-        </article>
-
-        <article class="feature-card">
-          <div class="f-ico">🎨</div>
-          <h3>Design tokens</h3>
-          <p>Color variables, spacing scale and typographic rhythm that are easy to extend.</p>
-        </article>
-
-        <article class="feature-card">
-          <div class="f-ico">🔒</div>
-          <h3>Accessible</h3>
-          <p>High contrast modes, visible focus states, and semantic structure out-of-the-box.</p>
-        </article>
-
-        <article class="feature-card">
-          <div class="f-ico">♻️</div>
-          <h3>Small & maintainable</h3>
-          <p>Organized CSS with utilities and components — keep your code readable and simple.</p>
-        </article>
-      </div>
-    </section>
-
-    <section id="showcase" class="showcase">
-      <div class="container showcase-grid">
-        <div class="showcase-item">
-          <div class="glass">
-            <h4>Landing Pages</h4>
-            <p>Beautiful, fast and conversion-focused layouts ready to be cloned.</p>
-            <a href="#" class="link">View templates →</a>
-          </div>
+    <section id="tips" class="container section small">
+      <div class="tips-grid">
+        <div class="tip">
+          <h4>Pack Smart</h4>
+          <p>Layering wins — check weather, bring a compact rain jacket and a daypack.</p>
         </div>
-
-        <div class="showcase-item">
-          <div class="glass">
-            <h4>Documentation</h4>
-            <p>Readable, search-friendly docs that feel native to your product.</p>
-            <a href="#" class="link">Learn more →</a>
-          </div>
+        <div class="tip">
+          <h4>Stay Local</h4>
+          <p>Try neighborhood eateries — they often make the trip memorable.</p>
         </div>
-
-        <div class="showcase-item">
-          <div class="glass">
-            <h4>Marketing</h4>
-            <p>Convert visitors with attractive hero sections and clear CTAs.</p>
-            <a href="#" class="link">See examples →</a>
-          </div>
+        <div class="tip">
+          <h4>Flexible Plans</h4>
+          <p>Leave pockets of free time; the best moments are often unplanned.</p>
         </div>
-      </div>
-    </section>
-
-    <section id="pricing" class="container pricing">
-      <h2 class="section-title">Simple pricing</h2>
-      <div class="pricing-grid" aria-hidden="false">
-        <div class="price-card">
-          <h3>Starter</h3>
-          <p class="price">$0 <span>/ forever</span></p>
-          <ul>
-            <li>Static pages</li>
-            <li>Basic components</li>
-            <li>Community support</li>
-          </ul>
-          <button class="btn btn-outline">Get starter</button>
-        </div>
-
-        <div class="price-card popular">
-          <div class="ribbon">Popular</div>
-          <h3>Pro</h3>
-          <p class="price">$9 <span>/ month</span></p>
-          <ul>
-            <li>Everything in Starter</li>
-            <li>Design tokens</li>
-            <li>Priority support</li>
-          </ul>
-          <button class="btn btn-primary">Start free trial</button>
-        </div>
-
-        <div class="price-card">
-          <h3>Enterprise</h3>
-          <p class="price">Custom</p>
-          <ul>
-            <li>SSO & integrations</li>
-            <li>Custom branding</li>
-            <li>Dedicated support</li>
-          </ul>
-          <button class="btn btn-ghost" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Contact us</button>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="contact container">
-      <div class="contact-card">
-        <h2>Ready to start?</h2>
-        <p>Drop your email and we'll send starter files and tips to get you going.</p>
-
-        <form class="contact-form" onsubmit="event.preventDefault(); alert('Thanks! (demo)');">
-          <input type="email" placeholder="you@company.com" aria-label="Email" required>
-          <button type="submit" class="btn btn-cta">Send me starter</button>
-        </form>
-
-        <p class="muted small">No spam. Unsubscribe anytime.</p>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <div class="foot-left">
-        <span>© <span id="year"></span> NextGen — Built with HTML & CSS</span>
-      </div>
-
-      <div class="foot-right">
-        <a href="#" class="muted">Privacy</a>
-        <a href="#" class="muted">Terms</a>
-        <a href="#" class="muted">GitHub</a>
-      </div>
+      <div>© <strong>Voyage</strong> 2025 — Built with HTML & CSS</div>
+      <div class="muted">Made for prototypes and design exploration.</div>
     </div>
   </footer>
-
-  <script>
-    // Small JS for theme toggle & year
-    (function(){
-      const btn = document.getElementById('themeToggle');
-      const root = document.documentElement;
-      const stored = localStorage.getItem('nextgen-dark');
-      const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-      function setDark(d){
-        if(d) root.classList.add('dark');
-        else root.classList.remove('dark');
-        localStorage.setItem('nextgen-dark', d ? '1' : '0');
-      }
-
-      if(stored !== null) setDark(stored === '1');
-      else setDark(prefersDark);
-
-      btn.addEventListener('click', () => setDark(!root.classList.contains('dark')));
-
-      // current year
-      document.getElementById('year').textContent = new Date().getFullYear();
-    })();
-  </script>
 </body>
 </html>
