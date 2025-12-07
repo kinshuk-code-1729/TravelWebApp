@@ -43,13 +43,14 @@ body{
 .header-inner{display:flex;align-items:center;gap:16px;justify-content:space-between}
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit}
 .logo-img{
-  /* FIXED: Styling for the PNG logo is now robust */
-  width:64px;height:64px;object-fit:contain;border-radius:8px;
+  /* UPDATED: Increased logo size */
+  width:80px;height:80px;object-fit:contain;border-radius:10px; /* Slightly larger border-radius for size */
   border:1px solid rgba(0,0,0,0.08);
-  background:transparent;padding:6px;display:block;
+  background:transparent;padding:8px; /* Increased padding */
+  display:block;
 }
-/* Removed .logo-svg styling as it's no longer used */
-.brand-name{font-weight:800;font-family:Poppins, Inter, sans-serif;font-size:18px;color:var(--text)}
+/* UPDATED: Increased brand name font size */
+.brand-name{font-weight:800;font-family:Poppins, Inter, sans-serif;font-size:22px;color:var(--text)}
 .nav{display:flex;gap:18px;align-items:center}
 .nav a{color:rgba(255,255,255,0.9);text-decoration:none;font-weight:600;font-size:14px}
 .cta{background:var(--accent-1);border:0;padding:10px 14px;border-radius:10px;color:#061123;font-weight:700;cursor:pointer;box-shadow:0 8px 28px rgba(123,97,255,0.18);}
@@ -57,7 +58,8 @@ body{
 /* Hero */
 .hero{padding:56px 0}
 .hero-inner{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center}
-.hero-copy h1{font-family:Poppins,Inter,sans-serif;font-size:40px;margin:0 0 10px}
+/* UPDATED: Increased H1 font size for desktop */
+.hero-copy h1{font-family:Poppins,Inter,sans-serif;font-size:64px;margin:0 0 10px}
 .hero-copy p{color:rgba(255,255,255,0.92);max-width:54ch;margin-bottom:20px}
 .search-form{display:flex;gap:12px;align-items:end;flex-wrap:wrap}
 .search-form .field{display:flex;flex-direction:column}
@@ -118,7 +120,7 @@ body{
 /* Ensure footer contents are centered vertically */
 .footer-inner{display:flex;justify-content:space-between;align-items:center} 
 
-/* Style for the support email link (RE-ADDED) */
+/* Style for the support email link */
 .support-link{
     color:rgba(255,255,255,0.7);
     text-decoration:none;
@@ -149,6 +151,9 @@ body{
   .nav{display:none}
   .cta{padding:8px 10px}
   
+  /* UPDATED: Responsive H1 font size for smaller screens */
+  .hero-copy h1{font-size:44px;}
+
   /* Stack footer items on mobile */
   .footer-inner{flex-direction:column;gap:8px;text-align:center}
 }
