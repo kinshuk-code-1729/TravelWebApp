@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>The Travel Tribe — Travel Planner</title>
+  <link rel="icon" href="assets/logo.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="The Travel Tribe — A modern static travel planner UI (HTML + CSS).">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#" aria-label="The Travel Tribe homepage">
+        <img src="assets/logo.png" alt="The Travel Tribe logo" class="logo-img" />
+        <span class="brand-name">The Travel Tribe</span>
+      </a>
+
+      <nav class="nav">
+        <a href="#destinations">Destinations</a>
+        <a href="#itinerary">Itinerary</a>
+        <a href="#tips">Travel Tips</a>
+      </nav>
+
+      <button class="cta" aria-label="Start Planning">Start Planning</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1>Plan thoughtful trips. Faster.</h1>
+          <p>A lightweight travel planner interface — discover destinations, build itineraries, and visualize your next escape.</p>
+
+          <form class="search-form" aria-label="Quick trip search">
+            <div class="field">
+              <label for="destination">Destination</label>
+              <input id="destination" name="destination" placeholder="e.g. Bali, Tokyo, Lisbon" />
+            </div>
+            <div class="field small">
+              <label for="from">From</label>
+              <input id="from" type="date" />
+            </div>
+            <div class="field small">
+              <label for="to">To</label>
+              <input id="to" type="date" />
+            </div>
+            <button type="submit" class="search-btn">Explore</button>
+          </form>
+
+          <div class="quick-stats">
+            <div><strong>120+</strong> curated picks</div>
+            <div><strong>5</strong> minute itineraries</div>
+            <div><strong>100%</strong> privacy — local only</div>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <div class="visual-grid">
+            <div class="tile" style="background-image:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=7f0fa7b2ceeb4d6b6f6f9c9ecb1e1c4d');"></div>
+            <div class="tile" style="background-image:url('https://images.unsplash.com/photo-1491557345352-5929e343eb89?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=5e3d68f0c7c6e2d9f0fd9f7ff8b1e9b8');"></div>
+            <div class="tile" style="background-image:url('https://images.unsplash.com/photo-1483683804023-6ccdb62f86ef?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=63f1f0e5b16b3c7f4f3d26d8b4f1b3fb');"></div>
+            <div class="tile" style="background-image:url('https://images.unsplash.com/photo-1472214103451-9374bd1c798e?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=ef4c84f3b2881b0ef1ab9344d9f7f1b4');"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="destinations" class="container section">
+      <div class="section-head">
+        <h2>Featured Destinations</h2>
+        <p>Hand-picked places to inspire your next trip.</p>
+      </div>
+
+      <div class="cards-grid">
+        <article class="card">
+          <div class="media" style="background-image:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=8f6f6b2a0b4b8a8e8f6f6e6f6f6f6f6f');"></div>
+          <div class="card-body">
+            <h3>Lisbon, Portugal</h3>
+            <p>Historic streets, seaside vibes, and pastel tiles — a compact city for wandering.</p>
+            <div class="card-meta">
+              <span>3–5 days</span>
+              <span>€</span>
+              <label class="add-btn">
+                <input type="checkbox" />
+                <span>Add to plan</span>
+              </label>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="media" style="background-image:url('https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=1b2f3f4e5d6c7b8a9a0a1a2b3c4d5e6f');"></div>
+          <div class="card-body">
+            <h3>Kyoto, Japan</h3>
+            <p>Temples, gardens and centuries of culture. Perfect for mindful travel.</p>
+            <div class="card-meta">
+              <span>4–7 days</span>
+              <span>¥¥</span>
+              <label class="add-btn">
+                <input type="checkbox" />
+                <span>Add to plan</span>
+              </label>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="media" style="background-image:url('https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=7c2c43f4c681b6a4a92e2d3d16d9d9f7');"></div>
+          <div class="card-body">
+            <h3>Reykjavík, Iceland</h3>
+            <p>Otherworldly landscapes, geothermal pools and dramatic coasts.</p>
+            <div class="card-meta">
+              <span>5–8 days</span>
+              <span>$$$</span>
+              <label class="add-btn">
+                <input type="checkbox" />
+                <span>Add to plan</span>
+              </label>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="itinerary" class="container section">
+      <div class="section-head">
+        <h2>Your Itinerary Preview</h2>
+        <p>Static preview and printable card — designed with accessible HTML and CSS for clarity.</p>
+      </div>
+
+      <div class="itinerary-wrap">
+        <aside class="itinerary-panel">
+          <h3>My Trip</h3>
+          <p class="muted">Select any "Add to plan" checkbox above to imagine items here (static demo).</p>
+
+          <div class="itinerary-card">
+            <h4>Lisbon • 4 days</h4>
+            <ul>
+              <li>Day 1 — Belém & Pastéis tasting</li>
+              <li>Day 2 — Alfama & Fado evening</li>
+              <li>Day 3 — Sintra day trip</li>
+            </ul>
+            <div class="itinerary-actions">
+              <button class="btn-outline">Export PDF</button>
+              <button class="btn">Print</button>
+            </div>
+          </div>
+
+          <details class="pref-details">
+            <summary>Trip Preferences</summary>
+            <form class="prefs-form">
+              <label><input type="checkbox" /> Food & Local</label>
+              <label><input type="checkbox" checked /> Sightseeing</label>
+              <label><input type="checkbox" /> Nature</label>
+              <label><input type="checkbox" /> Nightlife</label>
+            </form>
+          </details>
+        </aside>
+
+        <section class="itinerary-main">
+          <div class="map-shot" aria-hidden="true">
+            <div class="map-overlay">Map preview</div>
+          </div>
+
+          <div class="day-cards">
+            <article class="day">
+              <div class="day-head">
+                <h4>Day 1 — Lisbon</h4>
+                <span class="time">09:00 → 20:00</span>
+              </div>
+              <p class="muted">Start slow: local markets then riverside sunset.</p>
+              <ul>
+                <li>09:00 — Breakfast at Mercado da Ribeira</li>
+                <li>11:00 — Jerónimos Monastery</li>
+                <li>17:30 — Sunset at Miradouro</li>
+              </ul>
+            </article>
+
+            <article class="day">
+              <div class="day-head">
+                <h4>Day 2 — Sintra</h4>
+                <span class="time">08:00 → 18:00</span>
+              </div>
+              <p class="muted">Palaces and coastal viewpoints.</p>
+              <ul>
+                <li>09:30 — Pena Palace</li>
+                <li>13:00 — Lunch in Sintra town</li>
+                <li>16:00 — Cabo da Roca (coast)</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section id="tips" class="container section small">
+      <div class="tips-grid">
+        <div class="tip">
+          <h4>Pack Smart</h4>
+          <p>Layering wins — check weather, bring a compact rain jacket and a daypack.</p>
+        </div>
+        <div class="tip">
+          <h4>Stay Local</h4>
+          <p>Try neighborhood eateries — they often make the trip memorable.</p>
+        </div>
+        <div class="tip">
+          <h4>Flexible Plans</h4>
+          <p>Leave pockets of free time; the best moments are often unplanned.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© <strong>The Travel Tribe</strong> 2025 — Built with HTML & CSS</div>
+      <div class="muted">Made for prototypes and design exploration.</div>
+    </div>
+  </footer>
+</body>
+</html>
