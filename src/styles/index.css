@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gradient-to-br from-ocean-900 via-primary-800 to-sunset-600 text-white antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+    min-height: 100vh;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', system-ui, sans-serif;
+    @apply font-semibold;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl shadow-xl;
+  }
+
+  .glass-card-hover {
+    @apply glass-card transition-all duration-300 hover:bg-white/15 hover:shadow-2xl hover:scale-[1.02];
+  }
+
+  .btn-primary {
+    @apply px-6 py-3 bg-gradient-to-r from-primary-500 to-ocean-500 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 active:scale-95;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-xl border border-white/20 hover:bg-white/20 transition-all duration-300;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary-300 via-ocean-300 to-sunset-300 bg-clip-text text-transparent;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-24 px-4 sm:px-6 lg:px-8;
+  }
+
+  .container-custom {
+    @apply max-w-7xl mx-auto;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-ocean-900;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary-500 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary-400;
+}
+
