@@ -19,7 +19,6 @@ const Navigation = () => {
   const navLinks = [
     { path: '/', label: 'Home' },
     { path: '/destinations', label: 'Destinations' },
-    { path: '/itineraries', label: 'Itineraries' },
     { path: '/packages', label: 'Packages' },
     { path: '/travel-tips', label: 'Travel Tips' },
     { path: '/about', label: 'About' },
@@ -65,12 +64,6 @@ const Navigation = () => {
                 {link.label}
               </Link>
             ))}
-            <Link
-              to="/itineraries"
-              className="ml-4 btn-primary text-sm"
-            >
-              Start Planning
-            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -112,13 +105,6 @@ const Navigation = () => {
                   {link.label}
                 </Link>
               ))}
-              <Link
-                to="/itineraries"
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="block mt-4 btn-primary text-center"
-              >
-                Start Planning
-              </Link>
             </div>
           </motion.div>
         )}

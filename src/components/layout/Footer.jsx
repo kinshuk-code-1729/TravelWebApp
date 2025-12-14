@@ -8,7 +8,6 @@ const Footer = () => {
     explore: [
       { path: '/destinations', label: 'Destinations' },
       { path: '/packages', label: 'Travel Packages' },
-      { path: '/itineraries', label: 'Itineraries' },
       { path: '/travel-tips', label: 'Travel Tips' },
     ],
     company: [

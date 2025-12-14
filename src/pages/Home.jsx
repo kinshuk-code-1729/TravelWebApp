@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import { ArrowRight, Compass } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 import DestinationCard from '../components/ui/DestinationCard'
 import { destinations } from '../services/mockData'
 import { useTripPlanner } from '../hooks/useTripPlanner'
@@ -37,7 +37,11 @@ const Home = () => {
               transition={{ delay: 0.2, type: 'spring' }}
               className="inline-block mb-6"
             >
-              <Compass className="w-16 h-16 text-primary-400 mx-auto" />
+              <img
+                src="/logo.png"
+                alt="The Travel Tribe Logo"
+                className="h-24 w-auto mx-auto object-contain"
+              />
             </motion.div>
             
             <h1 className="text-5xl md:text-7xl font-display font-bold text-white mb-6 text-balance">
@@ -50,8 +54,8 @@ const Home = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link to="/itineraries" className="btn-primary text-lg px-8 py-4 flex items-center space-x-2">
-                <span>Start Planning</span>
+              <Link to="/packages" className="btn-primary text-lg px-8 py-4 flex items-center space-x-2">
+                <span>View Packages</span>
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <Link to="/destinations" className="btn-secondary text-lg px-8 py-4">
@@ -141,8 +145,8 @@ const Home = () => {
               Let us help you create an unforgettable travel experience tailored to your preferences.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link to="/itineraries" className="btn-primary text-lg px-8 py-4">
-                Build Your Itinerary
+              <Link to="/packages" className="btn-primary text-lg px-8 py-4">
+                View Packages
               </Link>
               <Link to="/contact" className="btn-secondary text-lg px-8 py-4">
                 Contact Us

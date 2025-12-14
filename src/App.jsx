@@ -3,7 +3,6 @@ import { AnimatePresence, motion } from 'framer-motion'
 import Layout from './layouts/Layout'
 import Home from './pages/Home'
 import Destinations from './pages/Destinations'
-import Itineraries from './pages/Itineraries'
 import Packages from './pages/Packages'
 import TravelTips from './pages/TravelTips'
 import About from './pages/About'
@@ -62,20 +61,6 @@ function App() {
                 transition={pageTransition}
               >
                 <Destinations />
-              </motion.div>
-            }
-          />
-          <Route
-            path="/itineraries"
-            element={
-              <motion.div
-                initial="initial"
-                animate="animate"
-                exit="exit"
-                variants={pageVariants}
-                transition={pageTransition}
-              >
-                <Itineraries />
               </motion.div>
             }
           />

@@ -115,8 +115,8 @@ const About = () => {
               Ready to start your next adventure? Let's plan something amazing together.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link to="/itineraries" className="btn-primary">
-                Start Planning
+              <Link to="/packages" className="btn-primary">
+                View Packages
               </Link>
               <Link to="/contact" className="btn-secondary">
                 Get in Touch
