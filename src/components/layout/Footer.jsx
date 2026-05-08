@@ -128,6 +128,7 @@ const Footer = () => {
             <a
               href="mailto:thetraveltribe25@gmail.com"
               className="hover:text-primary-300 transition-colors"
+              target="_blank"
             >
               thetraveltribe25@gmail.com
             </a>
