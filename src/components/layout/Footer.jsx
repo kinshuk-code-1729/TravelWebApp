@@ -19,7 +19,7 @@ const Footer = () => {
   }
 
   const socialLinks = [
-    { icon: Instagram, href: 'https://www.instagram.com/thetraveltribe_in/', label: 'Instagram' },
+    { icon: Instagram, href: 'https://www.instagram.com/thetraveltribe_shop/', label: 'Instagram' },
     { icon: Facebook, href: '#', label: 'Facebook' },
     { icon: Twitter, href: '#', label: 'Twitter' },
     { icon: Youtube, href: '#', label: 'YouTube' },
@@ -51,6 +51,8 @@ const Footer = () => {
                   <a
                     key={social.label}
                     href={social.href}
+                    target={social.href.startsWith('http') ? '_blank' : undefined}
+                    rel={social.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                     aria-label={social.label}
                     className="w-10 h-10 flex items-center justify-center bg-white/10 hover:bg-white/20 rounded-lg transition-all duration-300 hover:scale-110"
                   >
